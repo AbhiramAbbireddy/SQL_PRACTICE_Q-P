@@ -4,6 +4,39 @@
 
 Aggregation across rows, group-based analysis using GROUP BY, group filtering using HAVING, understanding SQL query execution order, and the Golden Interview Rule for NULL handling in aggregates.
 
+## Schema & Dataset
+
+### Primary Table: `employees`
+
+| Column | Type | Description |
+| :--- | :--- | :--- |
+| `employee_id` | INT | Unique employee identifier |
+| `name` | VARCHAR | Employee name |
+| `department` | VARCHAR | Department name |
+| `salary` | INT (nullable) | Salary amount (Megan has NULL) |
+| `hire_date` | DATE | Hire date |
+| `manager_id` | INT (nullable) | Manager identifier |
+
+#### Sample Data:
+| employee_id | name | department | salary | hire_date | manager_id |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | Alice | HR | 55000 | 2021-03-15 | NULL |
+| 2 | Bob | IT | 70000 | 2020-07-21 | 5 |
+| 3 | Andrew | Finance | 48000 | 2022-01-10 | 6 |
+| 4 | Ankit | IT | 90000 | 2019-11-30 | 5 |
+| 5 | Sarah | IT | 120000 | 2018-06-18 | NULL |
+| 6 | John | Finance | 85000 | 2017-04-12 | NULL |
+| 7 | Ethan | HR | 45000 | 2023-02-01 | 1 |
+| 8 | Megan | Marketing | NULL | 2022-08-25 | 9 |
+| 9 | Brian | Marketing | 65000 | 2020-10-05 | NULL |
+| 10 | Alan | Sales | 60000 | 2021-12-20 | 11 |
+
+### Extended Schema Variations (Introduced in Chat):
+- **Problem 11 (`city` column)**:
+  `employees (employee_id, name, city)`: e.g. (1, Alice, Delhi), (2, Bob, Mumbai), (3, Andrew, Delhi)
+- **Problem 12 (`designation` column)**:
+  `employees (employee_id, name, designation)`: e.g. (1, Alice, Manager), (2, Bob, Developer), (3, Andrew, Developer)
+
 ## Concepts Covered
 
 - Aggregate functions: `COUNT(*)`, `COUNT(column)`, `MAX()`, `MIN()`, `AVG()`, `SUM()`

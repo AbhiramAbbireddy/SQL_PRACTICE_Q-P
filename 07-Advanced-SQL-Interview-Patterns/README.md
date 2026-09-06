@@ -4,6 +4,95 @@
 
 Real-world interview challenges from Amazon, Microsoft, and Google combining window functions, partitioning, analytical functions, execution order, and deterministic tie-breaking rules.
 
+## Schema & Dataset
+
+### 1. Challenges #1 & #4: Table `employees`
+Used for Amazon Second Highest Salary and Google Multi-metric calculations.
+
+| Column | Type | Description |
+| :--- | :--- | :--- |
+| `emp_id` | INT | Employee ID |
+| `name` | VARCHAR | Employee name |
+| `dept_id` | INT | Department ID |
+| `salary` | INT | Salary amount |
+
+#### Sample Data:
+| emp_id | name | dept_id | salary |
+| :--- | :--- | :--- | :--- |
+| 1 | Alice | 101 | 55000 |
+| 2 | Bob | 102 | 70000 |
+| 3 | Charlie | 103 | 65000 |
+| 4 | David | 102 | 90000 |
+| 5 | Sarah | 102 | 120000 |
+| 6 | John | 103 | 85000 |
+| 7 | Andrew | 101 | 48000 |
+
+---
+
+### 2. Challenge #2: Table `orders`
+Used for Microsoft Latest Order per Customer.
+
+| Column | Type | Description |
+| :--- | :--- | :--- |
+| `order_id` | INT | Order ID |
+| `customer_id` | INT | Customer ID |
+| `order_date` | DATE | Date order was placed |
+| `amount` | INT | Total order amount |
+
+#### Sample Data:
+| order_id | customer_id | order_date | amount |
+| :--- | :--- | :--- | :--- |
+| 1 | 101 | 2024-01-10 | 500 |
+| 2 | 101 | 2024-02-15 | 700 |
+| 3 | 102 | 2024-01-20 | 400 |
+| 4 | 103 | 2024-03-12 | 900 |
+| 5 | 102 | 2024-04-05 | 600 |
+| 6 | 101 | 2024-05-01 | 300 |
+
+---
+
+### 3. Challenge #3: Table `sales`
+Used for Amazon Time-Series Previous Sale & Difference.
+
+| Column | Type | Description |
+| :--- | :--- | :--- |
+| `sale_id` | INT | Sale ID |
+| `product` | VARCHAR | Product name |
+| `sale_date` | DATE | Sale date |
+| `amount` | INT | Sale transaction amount |
+
+#### Sample Data:
+| sale_id | product | sale_date | amount |
+| :--- | :--- | :--- | :--- |
+| 1 | Laptop | 2024-01-01 | 1000 |
+| 2 | Laptop | 2024-01-15 | 1200 |
+| 3 | Laptop | 2024-02-01 | 900 |
+| 4 | Phone | 2024-01-10 | 500 |
+| 5 | Phone | 2024-02-05 | 700 |
+| 6 | Phone | 2024-03-01 | 650 |
+
+---
+
+### 4. Challenge #5 (Final Posed Challenge): Table `transactions`
+Table presented for the percentage change challenge.
+
+| Column | Type | Description |
+| :--- | :--- | :--- |
+| `txn_id` | INT | Transaction ID |
+| `customer_id` | INT | Customer ID |
+| `txn_date` | DATE | Transaction date |
+| `amount` | INT | Transaction amount |
+
+#### Sample Data:
+| txn_id | customer_id | txn_date | amount |
+| :--- | :--- | :--- | :--- |
+| 1 | 101 | 2024-01-01 | 500 |
+| 2 | 101 | 2024-01-05 | 700 |
+| 3 | 101 | 2024-01-20 | 300 |
+| 4 | 102 | 2024-01-02 | 900 |
+| 5 | 102 | 2024-01-15 | 800 |
+| 6 | 103 | 2024-01-10 | 1000 |
+
 ## Concepts Covered
 
 - Pattern recognition in technical interview problems

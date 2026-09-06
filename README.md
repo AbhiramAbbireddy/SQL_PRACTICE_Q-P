@@ -40,6 +40,22 @@ The learning path follows a systematic progression from SQL basics to real FAANG
 
 ---
 
+## 🗄️ Topic Schemas & Datasets
+
+Each topic folder includes the exact relational schema and sample dataset used in that module:
+
+| Topic Folder | Primary Table(s) | Key Columns & Schema Context |
+| :--- | :--- | :--- |
+| [`01-SQL-Basics`](./01-SQL-Basics/) | `employees` | `employee_id`, `name`, `department`, `salary` (nullable), `hire_date`, `manager_id` |
+| [`02-Aggregate-Functions-And-GROUP-BY`](./02-Aggregate-Functions-And-GROUP-BY/) | `employees` | Base table + extended variations with `city` and `designation` |
+| [`03-SQL-Joins`](./03-SQL-Joins/) | `employees`, `departments` | `employees` (`emp_id`, `name`, `dept_id`, `salary`), `departments` (`dept_id`, `dept_name`, `location`) |
+| [`04-Subqueries`](./04-Subqueries/) | `employees`, `departments` | `employees` (`emp_id`, `name`, `dept_id`, `salary`), `departments` (`dept_id`, `dept_name`) |
+| [`05-Window-Functions`](./05-Window-Functions/) | `employees` | Ranking dataset (`name`, `dept`, `salary`), Analytical dataset (`emp_id`, `name`, `salary`) |
+| [`06-Common-Table-Expressions-CTEs`](./06-Common-Table-Expressions-CTEs/) | `employees`, `departments` | `employees` (`emp_id`, `name`, `dept_id`, `department`, `salary`, `city`), `departments` (`dept_id`, `dept_name`) |
+| [`07-Advanced-SQL-Interview-Patterns`](./07-Advanced-SQL-Interview-Patterns/) | `employees`, `orders`, `sales`, `transactions` | Amazon/Google (`employees`), Microsoft (`orders`), Amazon Time-Series (`sales`), Amazon SDE-2 (`transactions`) |
+
+---
+
 ## 📂 Repository Structure
 
 ```text

@@ -4,6 +4,46 @@
 
 Structuring multi-step queries using Common Table Expressions (`WITH` clause), comparing CTEs to derived tables and window functions, chaining multiple CTEs, schema awareness in relational queries, and knowing when to use CTEs vs simpler SQL constructs.
 
+## Schema & Dataset
+
+### Table 1: `employees`
+
+| Column | Type | Description |
+| :--- | :--- | :--- |
+| `emp_id` | INT | Employee ID |
+| `name` | VARCHAR | Employee name |
+| `dept_id` | INT (nullable) | Department ID (Ethan has NULL) |
+| `department` | VARCHAR (nullable) | Department name |
+| `salary` | INT | Salary amount |
+| `city` | VARCHAR | Office city |
+
+#### Sample Data:
+| emp_id | name | dept_id | department | salary | city |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | Alice | 101 | HR | 55000 | Hyderabad |
+| 2 | Bob | 102 | IT | 70000 | Bangalore |
+| 3 | Charlie | 103 | Finance | 65000 | Chennai |
+| 4 | David | 102 | IT | 90000 | Bangalore |
+| 5 | Sarah | 102 | IT | 120000 | Pune |
+| 6 | John | 103 | Finance | 85000 | Chennai |
+| 7 | Andrew | 101 | HR | 48000 | Hyderabad |
+| 8 | Ethan | NULL | NULL | 45000 | Delhi |
+
+### Table 2: `departments`
+
+| Column | Type | Description |
+| :--- | :--- | :--- |
+| `dept_id` | INT | Department ID (Primary Key) |
+| `dept_name` | VARCHAR | Department name |
+
+#### Sample Data:
+| dept_id | dept_name |
+| :--- | :--- |
+| 101 | HR |
+| 102 | IT |
+| 103 | Finance |
+| 104 | Marketing |
+
 ## Concepts Covered
 
 - What is a CTE: named temporary result set defined with `WITH`

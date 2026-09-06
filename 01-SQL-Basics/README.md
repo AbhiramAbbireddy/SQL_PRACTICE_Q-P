@@ -4,6 +4,33 @@
 
 Foundational SQL data retrieval and filtering using the `employees` table. Covers selecting all or specific columns, filtering rows using comparison operators and BETWEEN, pattern matching with LIKE, handling NULL and NOT NULL records with three-valued logic, sorting rows with ORDER BY and handling NULL placement, and limiting result sets across different database engines.
 
+## Schema & Dataset
+
+### Table: `employees`
+
+| Column | Type | Description |
+| :--- | :--- | :--- |
+| `employee_id` | INT | Unique employee identifier (Primary Key) |
+| `name` | VARCHAR | Employee full name |
+| `department` | VARCHAR | Department name |
+| `salary` | INT (nullable) | Monthly/annual salary (contains NULLs) |
+| `hire_date` | DATE | Date of employment |
+| `manager_id` | INT (nullable) | Manager's employee ID |
+
+#### Sample Data:
+| employee_id | name | department | salary | hire_date | manager_id |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | Alice | HR | 55000 | 2021-03-15 | NULL |
+| 2 | Bob | IT | 70000 | 2020-07-21 | 5 |
+| 3 | Andrew | Finance | 48000 | 2022-01-10 | 6 |
+| 4 | Ankit | IT | 90000 | 2019-11-30 | 5 |
+| 5 | Sarah | IT | 120000 | 2018-06-18 | NULL |
+| 6 | John | Finance | 85000 | 2017-04-12 | NULL |
+| 7 | Ethan | HR | 45000 | 2023-02-01 | 1 |
+| 8 | Megan | Marketing | NULL | 2022-08-25 | 9 |
+| 9 | Brian | Marketing | 65000 | 2020-10-05 | NULL |
+| 10 | Alan | Sales | 60000 | 2021-12-20 | 11 |
+
 ## Concepts Covered
 
 - SELECT statement and column projection (`SELECT *` vs explicit column lists)

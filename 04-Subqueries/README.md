@@ -4,6 +4,43 @@
 
 Scalar subqueries, correlated subqueries, set membership using IN, existence testing using EXISTS/NOT EXISTS, the critical NOT IN NULL trap, derived tables (subqueries in the FROM clause), and nested subqueries.
 
+## Schema & Dataset
+
+### Table 1: `employees`
+
+| Column | Type | Description |
+| :--- | :--- | :--- |
+| `emp_id` | INT | Employee ID |
+| `name` | VARCHAR | Employee name |
+| `dept_id` | INT (nullable) | Department ID (Ethan has NULL) |
+| `salary` | INT | Salary amount |
+
+#### Sample Data:
+| emp_id | name | dept_id | salary |
+| :--- | :--- | :--- | :--- |
+| 1 | Alice | 101 | 55000 |
+| 2 | Bob | 102 | 70000 |
+| 3 | Andrew | 103 | 48000 |
+| 4 | Ankit | 102 | 90000 |
+| 5 | Sarah | 102 | 120000 |
+| 6 | John | 103 | 85000 |
+| 7 | Ethan | NULL | 45000 |
+
+### Table 2: `departments`
+
+| Column | Type | Description |
+| :--- | :--- | :--- |
+| `dept_id` | INT | Department ID |
+| `dept_name` | VARCHAR | Department name |
+
+#### Sample Data:
+| dept_id | dept_name |
+| :--- | :--- |
+| 101 | HR |
+| 102 | IT |
+| 103 | Finance |
+| 104 | Marketing |
+
 ## Concepts Covered
 
 - Scalar subquery (executes once, returns a single value)

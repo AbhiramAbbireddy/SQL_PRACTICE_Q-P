@@ -4,6 +4,51 @@
 
 Ranking functions (ROW_NUMBER, RANK, DENSE_RANK), the OVER clause with PARTITION BY and ORDER BY, SQL execution order constraints on window functions, navigation functions (LAG, LEAD), running totals, and whole-partition vs running aggregations.
 
+## Schema & Dataset
+
+### Part 1: Ranking & Partitioning Dataset (`employees`)
+
+| Column | Type | Description |
+| :--- | :--- | :--- |
+| `name` | VARCHAR | Employee name |
+| `dept` / `department` | VARCHAR | Department name |
+| `salary` | INT | Salary amount |
+
+#### Base Data:
+| name | dept | salary |
+| :--- | :--- | :--- |
+| Alice | HR | 55000 |
+| Bob | IT | 70000 |
+| Ankit | IT | 90000 |
+| Sarah | IT | 120000 |
+| Andrew | Finance | 48000 |
+| John | Finance | 85000 |
+
+#### Tied Salaries Scenario (Introduced for RANK / DENSE_RANK):
+| name | dept | salary |
+| :--- | :--- | :--- |
+| Sarah | IT | 120000 |
+| David | IT | 120000 |
+| Ankit | IT | 90000 |
+| Bob | IT | 70000 |
+
+### Part 2: Analytical Functions Dataset (`employees`)
+
+| Column | Type | Description |
+| :--- | :--- | :--- |
+| `emp_id` | INT | Sequential employee ID |
+| `name` | VARCHAR | Employee name |
+| `salary` | INT | Salary amount |
+
+#### Sample Data:
+| emp_id | name | salary |
+| :--- | :--- | :--- |
+| 1 | Alice | 55000 |
+| 2 | Bob | 70000 |
+| 3 | Charlie | 85000 |
+| 4 | David | 90000 |
+| 5 | Sarah | 120000 |
+
 ## Concepts Covered
 
 - Golden Rule: Aggregate functions reduce rows; window functions preserve rows

@@ -4,6 +4,48 @@
 
 Relational data joining across tables (`employees` and `departments`). Covers INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, table preservation, identifying unmatched records, and the crucial distinction between filtering in ON vs WHERE.
 
+## Schema & Dataset
+
+### Table 1: `employees`
+
+| Column | Type | Description |
+| :--- | :--- | :--- |
+| `emp_id` | INT | Employee ID |
+| `name` | VARCHAR | Employee name |
+| `dept_id` | INT (nullable) | Department foreign key (Ethan has NULL) |
+| `salary` | INT | Salary amount |
+
+#### Sample Data:
+| emp_id | name | dept_id | salary |
+| :--- | :--- | :--- | :--- |
+| 1 | Alice | 101 | 55000 |
+| 2 | Bob | 102 | 70000 |
+| 3 | Andrew | 103 | 48000 |
+| 4 | Ankit | 102 | 90000 |
+| 5 | Sarah | 102 | 120000 |
+| 6 | John | 103 | 85000 |
+| 7 | Ethan | NULL | 45000 |
+
+### Table 2: `departments`
+
+| Column | Type | Description |
+| :--- | :--- | :--- |
+| `dept_id` | INT | Department ID (Primary Key) |
+| `dept_name` | VARCHAR | Department name |
+| `location` | VARCHAR | Office location |
+
+#### Sample Data:
+| dept_id | dept_name | location |
+| :--- | :--- | :--- |
+| 101 | HR | Hyderabad |
+| 102 | IT | Bangalore |
+| 103 | Finance | Mumbai |
+| 104 | Marketing | Delhi |
+
+> **Key Dataset Observations**:
+> - Employee **Ethan** has no department (`dept_id = NULL`).
+> - Department **Marketing (104)** has no employees.
+
 ## Concepts Covered
 
 - INNER JOIN: returns only matching rows (intersection)
